@@ -43,12 +43,15 @@ your device as audio.
   Nominatim) to find map coordinates, and **pairs of coordinates** are
   sent to a routing service (OSRM) to estimate travel times. These
   requests carry no account identity, and results are cached.
+- **If the app crashes or hits an error**, a diagnostic report (stack
+  trace, device model, OS version, app version) is sent to Sentry so we
+  can fix it. These reports are scrubbed of message text before sending
+  and never include household content or anything you captured.
 
 ## What we do NOT do
 
-- No advertising, no trackers, no analytics SDKs, no crash-reporting
-  services (as of this policy's date), no selling or sharing of data with
-  data brokers.
+- No advertising, no trackers, no analytics SDKs, no selling or
+  sharing of data with data brokers.
 - No training of AI models on your data, by us or (per their API terms)
   by Anthropic.
 - No background location tracking. The app never reads your device's GPS
@@ -84,6 +87,7 @@ will delete it.
 | Supabase | account auth + household sync | email, password (hashed), synced household data |
 | Anthropic (Claude API) | turn captured text into draft events | the text you capture, via our pass-through proxy or your own key |
 | Resend | password-reset emails | your email address |
+| Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
 | OpenStreetMap Nominatim | address → coordinates | address text you save |
 | OSRM / FOSSGIS | travel-time estimates | pairs of map coordinates |
 
