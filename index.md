@@ -95,4 +95,4 @@ app's release notes.
 
 ## Contact
 
-Questions or data requests: **homie.scheduler@pm.me**
+Questions or data requests: **homie.family@protonmail.com**
