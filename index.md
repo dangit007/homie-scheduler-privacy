@@ -1,8 +1,8 @@
-# Homie Scheduler — Privacy Policy
+# Homie — Privacy Policy
 
 _Last updated: July 17, 2026_
 
-Homie Scheduler is a household scheduling app for families. This policy
+Homie is a household scheduling app for families. This policy
 explains what data the app handles, where it goes, and what stays on your
 device. The short version: your household's data lives on your devices and
 in a private synced copy only your household can read; nothing is sold,
@@ -59,7 +59,7 @@ your device as audio.
 
 ## Children
 
-Homie Scheduler is designed for families, including children. **A child
+Homie is designed for families, including children. **A child
 cannot create an account on their own**: child accounts can only join a
 household through an invite code created by a signed-in adult of that
 household — creating that invite is the parent's or guardian's consent
