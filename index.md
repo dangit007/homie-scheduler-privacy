@@ -39,10 +39,13 @@ your device as audio.
 - **Voice capture is transcribed on your device** by the operating
   system's speech recognition. Audio is never uploaded. Only the
   resulting text is handled as above.
-- **Addresses you save** are sent to a geocoding service (OpenStreetMap
-  Nominatim) to find map coordinates, and **pairs of coordinates** are
-  sent to a routing service (OSRM) to estimate travel times. These
-  requests carry no account identity, and results are cached.
+- **Addresses you save** are sent to a geocoding service (Geoapify) to
+  find map coordinates, and **pairs of coordinates** are sent to the same
+  service to estimate travel times. For driving plans, the same pair of
+  coordinates goes to a traffic service (TomTom) shortly before
+  departure, so the estimate reflects real conditions. These requests
+  contain no account identity — never who is going, never your schedule —
+  and results are cached on your device.
 - **If the app crashes or hits an error**, a diagnostic report (stack
   trace, device model, OS version, app version) is sent to Sentry so we
   can fix it. These reports are scrubbed of message text before sending
@@ -88,8 +91,8 @@ will delete it.
 | Anthropic (Claude API) | turn captured text into draft events | the text you capture, via our pass-through proxy or your own key |
 | Resend | password-reset emails | your email address |
 | Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
-| OpenStreetMap Nominatim | address → coordinates | address text you save |
-| OSRM / FOSSGIS | travel-time estimates | pairs of map coordinates |
+| Geoapify | address → coordinates + travel-time estimates | address text you save; pairs of map coordinates (NOT who is traveling or why) |
+| TomTom | live traffic drive times near departure | pairs of map coordinates + a departure time (NOT who is driving, and only for driving plans) |
 
 ## Changes
 
