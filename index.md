@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: July 17, 2026_
+_Last updated: July 22, 2026_
 
 Homie is a household scheduling app for families. This policy
 explains what data the app handles, where it goes, and what stays on your
