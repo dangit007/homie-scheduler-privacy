@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: July 22, 2026_
+_Last updated: July 24, 2026_
 
 Homie is a household scheduling app for families. This policy
 explains what data the app handles, where it goes, and what stays on your
@@ -28,14 +28,14 @@ your device as audio.
 ## What leaves your device, and why
 
 - **Schedule text you type or dictate** can be sent to Anthropic's Claude
-  API to be turned into a structured draft event. If your household uses
-  its own Anthropic API key, text goes directly from your device to
-  Anthropic. Otherwise it passes through our proxy service, which
-  forwards it and **stores only a count of requests per account** (for
-  rate limiting) — never the text itself. Anthropic processes it under
-  its API terms, which do not permit training on API data. Parsing also
-  works fully offline with reduced quality; an AI failure never blocks
-  the app.
+  API to be turned into a structured draft event. It always passes through
+  our proxy service, which forwards it and **stores only a count of
+  requests per account** (for rate limiting) — never the text itself.
+  There is no setting for this and no key to enter; a device that is
+  signed out does the parsing on its own, on the phone. Anthropic
+  processes it under its API terms, which do not permit training on API
+  data. Parsing also works fully offline with reduced quality; an AI
+  failure never blocks the app.
 - **Voice capture is transcribed on your device** by the operating
   system's speech recognition. Audio is never uploaded. Only the
   resulting text is handled as above.
@@ -46,6 +46,15 @@ your device as audio.
   departure, so the estimate reflects real conditions. These requests
   contain no account identity — never who is going, never your schedule —
   and results are cached on your device.
+- **Where you are, but only while you search for a place.** When you look
+  up a place to put on a plan, the app can ask for your device's location
+  and send it to Geoapify as the centre of the search, so the nearest
+  match ranks first. Permission is requested the first time a search needs
+  it — never when you open the app — and you may decline, in which case
+  your saved home address is used as the centre instead. On Android the
+  app asks for approximate location only. The position is used to order
+  that one list of results: it is not stored on our servers, not synced to
+  your household, and never attached to a plan.
 - **If the app crashes or hits an error**, a diagnostic report (stack
   trace, device model, OS version, app version) is sent to Sentry so we
   can fix it. These reports are scrubbed of message text before sending
@@ -57,8 +66,10 @@ your device as audio.
   sharing of data with data brokers.
 - No training of AI models on your data, by us or (per their API terms)
   by Anthropic.
-- No background location tracking. The app never reads your device's GPS
-  location; it only geocodes addresses you type in.
+- No background location tracking, and no location access at all except
+  while you are actively searching for a place (see above). The app does
+  not follow you, does not log where you have been, and keeps no location
+  history.
 
 ## Children
 
@@ -75,9 +86,13 @@ will delete it.
 
 - **Access and deletion**: household adults can edit or delete any
   household record in the app. Removing a member (or a member leaving)
-  ends their access. To delete an account or an entire household's synced
-  data, contact us at the address below and we will remove it from the
-  hosted database.
+  ends their access. **You can delete your own account from inside the
+  app** — Home tab → Delete account. If you are the last member of your
+  household, its synced data is erased along with your account. If others
+  remain, the shared schedule stays with them (it belongs to the
+  household, not to any one person) while your personal details — your
+  private task lists, your contact email, any invite codes you created —
+  are removed. You can also contact us at the address below.
 - **Local-only mode**: the app works without sync; without it, household
   data never leaves your devices except for the AI parsing and map
   lookups described above.
@@ -88,10 +103,10 @@ will delete it.
 | Provider | Purpose | What they receive |
 |---|---|---|
 | Supabase | account auth + household sync | email, password (hashed), synced household data |
-| Anthropic (Claude API) | turn captured text into draft events | the text you capture, via our pass-through proxy or your own key |
+| Anthropic (Claude API) | turn captured text into draft events | the text you capture, via our pass-through proxy |
 | Resend | password-reset emails | your email address |
 | Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
-| Geoapify | address → coordinates + travel-time estimates | address text you save; pairs of map coordinates (NOT who is traveling or why) |
+| Geoapify | address → coordinates + travel-time estimates + place search | address text you save; pairs of map coordinates; while you search for a place, your device's position as the search centre (NOT who is traveling or why) |
 | TomTom | live traffic drive times near departure | pairs of map coordinates + a departure time (NOT who is driving, and only for driving plans) |
 
 ## Changes
