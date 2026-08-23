@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: July 24, 2026_
+_Last updated: August 21, 2026_
 
 Homie is a household scheduling app for families. This policy
 explains what data the app handles, where it goes, and what stays on your
@@ -24,6 +24,12 @@ your device as audio.
   operation; like any hosted database, it is technically accessible to
   the database administrator and to Supabase as the infrastructure
   provider.
+
+- **A notification token, if you turn nudges on.** Turning on
+  leave-time nudges registers an anonymous push identifier for that
+  device, so other devices in your household can tell it that a plan
+  moved. It identifies a phone, not a person, and it is stored only while
+  nudges are switched on.
 
 ## What leaves your device, and why
 
@@ -55,6 +61,15 @@ your device as audio.
   app asks for approximate location only. The position is used to order
   that one list of results: it is not stored on our servers, not synced to
   your household, and never attached to a plan.
+- **A "something changed" signal, if you turn nudges on.** Nudges
+  themselves are worked out and scheduled entirely on your phone — the
+  times you see are never calculated on a server. What travels is only a
+  silent background message telling your other household devices that a
+  plan changed and which household it belongs to, so each phone can update
+  its own reminders. **It carries no plan titles, no names, no addresses,
+  and nothing appears on screen when it arrives.** Delivery goes through
+  Expo's push service and then Apple's or Google's notification systems,
+  which see the device token and the message envelope.
 - **If the app crashes or hits an error**, a diagnostic report (stack
   trace, device model, OS version, app version) is sent to Sentry so we
   can fix it. These reports are scrubbed of message text before sending
@@ -78,7 +93,10 @@ cannot create an account on their own**: child accounts can only join a
 household through an invite code created by a signed-in adult of that
 household — creating that invite is the parent's or guardian's consent
 for the child's use of the app. Invite codes for restricted (child)
-accounts carry limited permissions set by the adult. If you believe a
+accounts carry limited permissions set by the adult. Notifications are off
+by default on every device, and the setting lives on a screen restricted
+accounts cannot reach, so a child's device does not register a
+notification token. If you believe a
 child's account was created without parental consent, contact us and we
 will delete it.
 
@@ -93,6 +111,9 @@ will delete it.
   household, not to any one person) while your personal details — your
   private task lists, your contact email, any invite codes you created —
   are removed. You can also contact us at the address below.
+- **Turning nudges off deletes the token** for that device, on our
+  servers as well as on the phone. Deleting your account deletes every
+  token registered to it.
 - **Local-only mode**: the app works without sync; without it, household
   data never leaves your devices except for the AI parsing and map
   lookups described above.
@@ -108,6 +129,8 @@ will delete it.
 | Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
 | Geoapify | address → coordinates + travel-time estimates + place search | address text you save; pairs of map coordinates; while you search for a place, your device's position as the search centre (NOT who is traveling or why) |
 | TomTom | live traffic drive times near departure | pairs of map coordinates + a departure time (NOT who is driving, and only for driving plans) |
+| Expo (Expo push service) | delivering the silent "a plan changed" signal to your other devices | your device's notification token + a signal naming which household changed (NOT plan titles, names or addresses) |
+| Apple (APNs) / Google (FCM) | carrying that signal to the device | your device's notification token + the same signal |
 
 ## Changes
 
