@@ -61,7 +61,10 @@ your device as audio.
   app asks for approximate location only. The position is used to order
   that one list of results: it is not stored on our servers, not synced to
   your household, and never attached to a plan.
-- **A "something changed" signal, if you turn nudges on.** Nudges
+- **A "something changed" signal, if you turn nudges on.** Our server
+  keeps a count of how many of these signals your account has sent in the
+  past hour, so a malfunctioning device cannot flood your family's phones;
+  the count holds no schedule content and ages out. Nudges
   themselves are worked out and scheduled entirely on your phone — the
   times you see are never calculated on a server. What travels is only a
   silent background message telling your other household devices that a
