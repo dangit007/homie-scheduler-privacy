@@ -1,9 +1,10 @@
 # Homie — Privacy Policy
 
-_Last updated: August 21, 2026_
+_Last updated: September 18, 2026_
 
-Homie is a household scheduling app for families. This policy
-explains what data the app handles, where it goes, and what stays on your
+Homie is a household scheduling app for families, provided by
+**Homie.Family** ("we", "us"). This policy explains what data the app
+handles, where it goes, and what stays on your
 device. The short version: your household's data lives on your devices and
 in a private synced copy only your household can read; nothing is sold,
 shared for advertising, or used to train AI models; voice never leaves
@@ -37,8 +38,9 @@ your device as audio.
   API to be turned into a structured draft event. It always passes through
   our proxy service, which forwards it and **stores only a count of
   requests per account** (for rate limiting) — never the text itself.
-  There is no setting for this and no key to enter; a device that is
-  signed out does the parsing on its own, on the phone. Anthropic
+  There is no setting for this and no key to enter. A device that is
+  signed out — or an account whose email address hasn't been confirmed
+  yet — does the parsing on its own, on the phone. Anthropic
   processes it under its API terms, which do not permit training on API
   data. Parsing also works fully offline with reduced quality; an AI
   failure never blocks the app.
@@ -73,6 +75,17 @@ your device as audio.
   and nothing appears on screen when it arrives.** Delivery goes through
   Expo's push service and then Apple's or Google's notification systems,
   which see the device token and the message envelope.
+- **Your email address, to confirm it and to reset a password.** When you
+  confirm your address, or ask to reset a forgotten password, a one-time
+  code is emailed to you (through Resend). Our server records that the
+  address was confirmed and when — nothing else about the email.
+- **Subscriptions, if your household has one.** Purchases are made and
+  paid for entirely through Apple's App Store; we never see card or payment
+  details. To know whether a household is subscribed, the app tells our
+  subscription provider (RevenueCat) a random account identifier and which
+  household the purchase is for, and RevenueCat tells our server when a
+  subscription starts, renews, is cancelled or ends. None of this includes
+  your schedule, names or addresses.
 - **If the app crashes or hits an error**, a diagnostic report (stack
   trace, device model, OS version, app version) is sent to Sentry so we
   can fix it. These reports are scrubbed of message text before sending
@@ -128,7 +141,9 @@ will delete it.
 |---|---|---|
 | Supabase | account auth + household sync | email, password (hashed), synced household data |
 | Anthropic (Claude API) | turn captured text into draft events | the text you capture, via our pass-through proxy |
-| Resend | password-reset emails | your email address |
+| Resend | password-reset and email-confirmation codes | your email address |
+| RevenueCat | subscription status | a random account identifier, which household a purchase is for, purchase and renewal records (NOT household content) |
+| Apple (App Store) | taking payment for subscriptions | your purchase, handled under Apple's own terms and privacy policy — we never see payment details |
 | Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
 | Geoapify | address → coordinates + travel-time estimates + place search | address text you save; pairs of map coordinates; while you search for a place, your device's position as the search centre (NOT who is traveling or why) |
 | TomTom | live traffic drive times near departure | pairs of map coordinates + a departure time (NOT who is driving, and only for driving plans) |
@@ -140,6 +155,10 @@ will delete it.
 We will update this page when the app's data handling changes and adjust
 the "last updated" date above. Material changes will be called out in the
 app's release notes.
+
+## Terms
+
+Your use of Homie is also covered by our [Terms of Use](terms).
 
 ## Contact
 
