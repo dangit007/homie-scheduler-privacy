@@ -1,6 +1,6 @@
 # Homie — Terms of Use
 
-_Last updated: September 18, 2026_
+_Last updated: October 21, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). These terms cover your use of the app and the
@@ -113,8 +113,9 @@ copy, resell or reverse-engineer the service except where the law allows it.
 
 ## Leaving
 
-You can sign out, leave a household or delete your account from inside the
-app at any time. What deleting removes, and what stays with a household you
+You can sign out, leave a household, delete a household you set up and are
+the only account in, or delete your account from inside the app at any
+time. What deleting removes, and what stays with a household you
 shared, is set out in our privacy policy. We may suspend or close an account
 that seriously or repeatedly breaks these terms; where it's reasonable, we'll
 tell you first.
@@ -146,8 +147,13 @@ live gives you.
 ## Changes
 
 We'll update this page when these terms change and adjust the date above.
-Material changes will be called out in the app's release notes before they
-take effect. Continuing to use Homie after that means you accept them.
+When a change is material, the app asks each adult account once, the next
+time it opens, to read the updated terms and agree to them before carrying
+on; we keep a note of that agreement, as the [Privacy Policy](/) describes.
+Children are never asked: the invite that brought them in is their parent's
+or guardian's consent. Continuing to use Homie after a change takes effect —
+including on a phone with no account, which is never asked — means you
+accept it.
 
 ## Contact
 

@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: September 18, 2026_
+_Last updated: October 21, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). This policy explains what data the app
@@ -31,6 +31,13 @@ your device as audio.
   device, so other devices in your household can tell it that a plan
   moved. It identifies a phone, not a person, and it is stored only while
   nudges are switched on.
+
+- **Which version of these terms you agreed to, and when.** When an adult
+  account agrees to the Terms of Use and this policy — by creating the
+  account, or by tapping Continue when the app asks after they change — our
+  server keeps a note of which version (the "last updated" date) and the
+  time. Nothing else is in it, and it is kept so we can show what you agreed
+  to and when. Children's accounts keep none (see Children).
 
 ## What leaves your device, and why
 
@@ -112,7 +119,10 @@ for the child's use of the app. Invite codes for restricted (child)
 accounts carry limited permissions set by the adult. Notifications are off
 by default on every device, and the setting lives on a screen restricted
 accounts cannot reach, so a child's device does not register a
-notification token. If you believe a
+notification token. Children are never asked to agree to the Terms of Use
+or this policy, and no record of agreement is kept for a child's account —
+if one was made before the account was known to be a child's, it is deleted
+the moment an adult identifies the account as their child. If you believe a
 child's account was created without parental consent, contact us and we
 will delete it.
 
@@ -126,7 +136,13 @@ will delete it.
   remain, the shared schedule stays with them (it belongs to the
   household, not to any one person) while your personal details — your
   private task lists, your contact email, any invite codes you created —
-  are removed. You can also contact us at the address below.
+  are removed. Either way, the note of which terms you agreed to is deleted
+  with your account. **You can also delete a household without deleting
+  your account**, if you set it up and yours is the only account in it —
+  Home tab → Delete household. Everything synced in it is erased for good,
+  including your private task lists there, your contact email on its list
+  and any invite codes for it; your account and its sign-in stay. You can
+  also contact us at the address below.
 - **Turning nudges off deletes the token** for that device, on our
   servers as well as on the phone. Deleting your account deletes every
   token registered to it.
@@ -139,7 +155,7 @@ will delete it.
 
 | Provider | Purpose | What they receive |
 |---|---|---|
-| Supabase | account auth + household sync | email, password (hashed), synced household data |
+| Supabase | account auth + household sync | email, password (hashed), synced household data, the note of which terms version an adult account agreed to and when |
 | Anthropic (Claude API) | turn captured text into draft events | the text you capture, via our pass-through proxy |
 | Resend | password-reset and email-confirmation codes | your email address |
 | RevenueCat | subscription status | a random account identifier, which household a purchase is for, purchase and renewal records (NOT household content) |
@@ -153,8 +169,9 @@ will delete it.
 ## Changes
 
 We will update this page when the app's data handling changes and adjust
-the "last updated" date above. Material changes will be called out in the
-app's release notes.
+the "last updated" date above. When a change is material, the app asks each
+adult account once, the next time it opens, to read the updated policy and
+agree to it before carrying on.
 
 ## Terms
 
