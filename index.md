@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: October 21, 2026_
+_Last updated: October 27, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). This policy explains what data the app
@@ -131,14 +131,18 @@ will delete it.
 - **Access and deletion**: household adults can edit or delete any
   household record in the app. Removing a member (or a member leaving)
   ends their access. **You can delete your own account from inside the
-  app** — Home tab → Delete account. If you are the last member of your
-  household, its synced data is erased along with your account. If others
-  remain, the shared schedule stays with them (it belongs to the
-  household, not to any one person) while your personal details — your
-  private task lists, your contact email, any invite codes you created —
-  are removed. Either way, the note of which terms you agreed to is deleted
-  with your account. **You can also delete a household without deleting
-  your account**, if you set it up and yours is the only account in it —
+  app** — Home tab → Delete account. It covers every household you belong
+  to, and before you confirm, the app names each one and says what will
+  happen to it. A household where another adult with full access remains
+  stays with them (it belongs to the household, not to any one person);
+  if you set it up, the adult who has been in it longest takes it over.
+  Your personal details in it — your private task lists, your contact
+  email, any invite codes you created — are removed. A household with no
+  other adult who can run it is erased along with your account: everything
+  synced in it, and the access of any children or helpers in it. Either
+  way, the note of which terms you agreed to is deleted with your account.
+  **You can also delete a household without deleting your account**, if
+  you set it up and yours is the only account in it —
   Home tab → Delete household. Everything synced in it is erased for good,
   including your private task lists there, your contact email on its list
   and any invite codes for it; your account and its sign-in stay. You can
