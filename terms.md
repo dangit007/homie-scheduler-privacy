@@ -1,6 +1,6 @@
 # Homie — Terms of Use
 
-_Last updated: October 21, 2026_
+_Last updated: November 13, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). These terms cover your use of the app and the
@@ -96,6 +96,11 @@ Travel times, traffic estimates and leave-time reminders are estimates
 based on third-party map and traffic data. They can be late, early or wrong,
 and a reminder can fail to arrive. Use your own judgement, especially for
 anything time-critical, and never rely on Homie where safety is at stake.
+
+Place search in Homie includes Google Maps features and content. Your use
+of them is subject to the then-current
+[Google Maps/Google Earth Additional Terms of Service](https://maps.google.com/help/terms_maps/)
+and the [Google Privacy Policy](https://policies.google.com/privacy).
 
 ## Your content
 

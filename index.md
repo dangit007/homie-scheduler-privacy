@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: October 27, 2026_
+_Last updated: November 13, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). This policy explains what data the app
@@ -54,16 +54,20 @@ your device as audio.
 - **Voice capture is transcribed on your device** by the operating
   system's speech recognition. Audio is never uploaded. Only the
   resulting text is handled as above.
-- **Addresses you save** are sent to a geocoding service (Geoapify) to
-  find map coordinates, and **pairs of coordinates** are sent to the same
-  service to estimate travel times. For driving plans, the same pair of
-  coordinates goes to a traffic service (TomTom) shortly before
-  departure, so the estimate reflects real conditions. These requests
-  contain no account identity — never who is going, never your schedule —
-  and results are cached on your device.
+- **Places you look up** go to Google Maps: the words you type while
+  searching for a place, then the place you pick or the address you save,
+  to find its address and map coordinates. **Pairs of coordinates** are
+  sent to a routing service (Geoapify) to estimate travel times. For
+  driving plans, the same pair of coordinates goes to a traffic service
+  (TomTom) shortly before departure, so the estimate reflects real
+  conditions. These requests contain no account identity — never who is
+  going, never your schedule. Search results stay on your device only
+  briefly; the address and coordinates of a place you choose are kept with
+  your household's places. Google handles what it receives under the
+  [Google Privacy Policy](https://policies.google.com/privacy).
 - **Where you are, but only while you search for a place.** When you look
   up a place to put on a plan, the app can ask for your device's location
-  and send it to Geoapify as the centre of the search, so the nearest
+  and send it to Google Maps as the centre of the search, so the nearest
   match ranks first. Permission is requested the first time a search needs
   it — never when you open the app — and you may decline, in which case
   your saved home address is used as the centre instead. On Android the
@@ -165,7 +169,8 @@ will delete it.
 | RevenueCat | subscription status | a random account identifier, which household a purchase is for, purchase and renewal records (NOT household content) |
 | Apple (App Store) | taking payment for subscriptions | your purchase, handled under Apple's own terms and privacy policy — we never see payment details |
 | Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
-| Geoapify | address → coordinates + travel-time estimates + place search | address text you save; pairs of map coordinates; while you search for a place, your device's position as the search centre (NOT who is traveling or why) |
+| Google (Google Maps Platform) | place search + address → coordinates | the words you type while searching for a place; the place you pick or address you save; while you search, your device's position (or your home's) as the search centre (NOT who is going or why) |
+| Geoapify | travel-time estimates | pairs of map coordinates (NOT who is traveling or why) |
 | TomTom | live traffic drive times near departure | pairs of map coordinates + a departure time (NOT who is driving, and only for driving plans) |
 | Expo (Expo push service) | delivering the silent "a plan changed" signal to your other devices | your device's notification token + a signal naming which household changed (NOT plan titles, names or addresses) |
 | Apple (APNs) / Google (FCM) | carrying that signal to the device | your device's notification token + the same signal |
