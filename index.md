@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: November 13, 2026_
+_Last updated: November 14, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). This policy explains what data the app
@@ -56,15 +56,16 @@ your device as audio.
   resulting text is handled as above.
 - **Places you look up** go to Google Maps: the words you type while
   searching for a place, then the place you pick or the address you save,
-  to find its address and map coordinates. **Pairs of coordinates** are
-  sent to a routing service (Geoapify) to estimate travel times. For
-  driving plans, the same pair of coordinates goes to a traffic service
-  (TomTom) shortly before departure, so the estimate reflects real
-  conditions. These requests contain no account identity — never who is
-  going, never your schedule. Search results stay on your device only
-  briefly; the address and coordinates of a place you choose are kept with
-  your household's places. Google handles what it receives under the
-  [Google Privacy Policy](https://policies.google.com/privacy).
+  to find its address and map coordinates. **Travel times** come from
+  Google Maps too: it receives a pair of map coordinates and, for a drive,
+  when you plan to leave, so the time reflects traffic for that day and
+  hour. The same pair of coordinates also goes to a routing service
+  (Geoapify) for a rough time your device keeps to show while Google's
+  answer loads. These requests contain no account identity — never who is
+  going, never your schedule. Search results and Google's travel times stay
+  on your device only briefly; the address and coordinates of a place you
+  choose are kept with your household's places. Google handles what it
+  receives under the [Google Privacy Policy](https://policies.google.com/privacy).
 - **Where you are, but only while you search for a place.** When you look
   up a place to put on a plan, the app can ask for your device's location
   and send it to Google Maps as the centre of the search, so the nearest
@@ -169,9 +170,8 @@ will delete it.
 | RevenueCat | subscription status | a random account identifier, which household a purchase is for, purchase and renewal records (NOT household content) |
 | Apple (App Store) | taking payment for subscriptions | your purchase, handled under Apple's own terms and privacy policy — we never see payment details |
 | Sentry | crash + error diagnostics | error reports: stack traces, device & OS version (NOT household content or captured text) |
-| Google (Google Maps Platform) | place search + address → coordinates | the words you type while searching for a place; the place you pick or address you save; while you search, your device's position (or your home's) as the search centre (NOT who is going or why) |
-| Geoapify | travel-time estimates | pairs of map coordinates (NOT who is traveling or why) |
-| TomTom | live traffic drive times near departure | pairs of map coordinates + a departure time (NOT who is driving, and only for driving plans) |
+| Google (Google Maps Platform) | place search, address → coordinates, travel times | the words you type while searching for a place; the place you pick or address you save; while you search, your device's position (or your home's) as the search centre; pairs of map coordinates, plus a departure time for drives (NOT who is going or why) |
+| Geoapify | a rough travel time kept on your device as a stand-in | pairs of map coordinates (NOT who is traveling or why) |
 | Expo (Expo push service) | delivering the silent "a plan changed" signal to your other devices | your device's notification token + a signal naming which household changed (NOT plan titles, names or addresses) |
 | Apple (APNs) / Google (FCM) | carrying that signal to the device | your device's notification token + the same signal |
 
