@@ -1,14 +1,15 @@
 # Homie — Privacy Policy
 
-_Last updated: November 14, 2026_
+_Last updated: November 25, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). This policy explains what data the app
 handles, where it goes, and what stays on your
 device. The short version: your household's data lives on your devices and
 in a private synced copy only your household can read; nothing is sold,
-shared for advertising, or used to train AI models; voice never leaves
-your device as audio.
+shared for advertising, or used to train AI models by us or our providers;
+voice never leaves your device as audio; and your household's data reaches
+an AI assistant only if an adult in your household connects one.
 
 ## What the app stores
 
@@ -98,6 +99,23 @@ your device as audio.
   household the purchase is for, and RevenueCat tells our server when a
   subscription starts, renews, is cancelled or ends. None of this includes
   your schedule, names or addresses.
+- **Your household's schedule, if an adult connects an AI assistant.** An
+  adult in the household can connect Homie to an AI assistant they use,
+  such as Claude or ChatGPT, by signing in on Homie's own page and allowing
+  it. After that, when you ask the assistant about your household, it reads
+  what the answer needs from your household's synced copy: its members,
+  plans and routines, saved places, and the birthdays and anniversaries
+  your account can see. That includes children's names and plans. It reads
+  with your own account's access, so it sees nothing you couldn't see in
+  the app, and it can read but not change anything. What it reads becomes
+  part of your conversation with that assistant, handled by the company
+  that makes it (for example Anthropic or OpenAI) under your own account's
+  terms and settings with them, including how long it is kept and whether
+  it may be used to improve their models. Nothing reaches an assistant
+  unless an adult connects one, and children's accounts cannot connect one.
+  Our server records which kind of question was asked, when, and which
+  assistant asked it, never what was asked or answered. To stop, remove
+  Homie from the assistant's connectors.
 - **If the app crashes or hits an error**, a diagnostic report (stack
   trace, device model, OS version, app version) is sent to Sentry so we
   can fix it. These reports are scrubbed of message text before sending
@@ -108,7 +126,8 @@ your device as audio.
 - No advertising, no trackers, no analytics SDKs, no selling or
   sharing of data with data brokers.
 - No training of AI models on your data, by us or (per their API terms)
-  by Anthropic.
+  by Anthropic. If you connect an AI assistant of your own, what it reads
+  is handled under your account with that company (see above).
 - No background location tracking, and no location access at all except
   while you are actively searching for a place (see above). The app does
   not follow you, does not log where you have been, and keeps no location
@@ -129,7 +148,8 @@ or this policy, and no record of agreement is kept for a child's account —
 if one was made before the account was known to be a child's, it is deleted
 the moment an adult identifies the account as their child. If you believe a
 child's account was created without parental consent, contact us and we
-will delete it.
+will delete it. Only an adult can connect an AI assistant to Homie; a
+child's account cannot.
 
 ## Your data, your control
 
@@ -174,6 +194,9 @@ will delete it.
 | Geoapify | a rough travel time kept on your device as a stand-in | pairs of map coordinates (NOT who is traveling or why) |
 | Expo (Expo push service) | delivering the silent "a plan changed" signal to your other devices | your device's notification token + a signal naming which household changed (NOT plan titles, names or addresses) |
 | Apple (APNs) / Google (FCM) | carrying that signal to the device | your device's notification token + the same signal |
+
+AI assistants you connect are not our service providers: you choose them,
+and they act under your own account with their makers.
 
 ## Changes
 
