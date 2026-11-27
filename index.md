@@ -107,9 +107,10 @@ an AI assistant only if an adult in your household connects one.
   plans and routines, saved places, and the birthdays and anniversaries
   your account can see. That includes children's names and plans. It reads
   with your own account's access, so it sees nothing you couldn't see in
-  the app. It can also suggest new plans, and move or cancel one day of a
-  plan already there, but nothing changes until you confirm it, in the
-  chat or in Homie; it can't delete a whole repeating plan. What it reads
+  the app. It can also suggest new plans, and move, cancel or change who's
+  driving or where for a plan already there, but nothing changes until you
+  confirm it, in the chat or in Homie; it can't delete a whole repeating
+  plan. What it reads
   becomes
   part of your conversation with that assistant, handled by the company
   that makes it (for example Anthropic or OpenAI) under your own account's
