@@ -1,6 +1,6 @@
 # Homie — Privacy Policy
 
-_Last updated: November 25, 2026_
+_Last updated: November 26, 2026_
 
 Homie is a household scheduling app for families, provided by
 **Homie.Family** ("we", "us"). This policy explains what data the app
@@ -107,7 +107,9 @@ an AI assistant only if an adult in your household connects one.
   plans and routines, saved places, and the birthdays and anniversaries
   your account can see. That includes children's names and plans. It reads
   with your own account's access, so it sees nothing you couldn't see in
-  the app, and it can read but not change anything. What it reads becomes
+  the app. It can also suggest new plans, but nothing is added until you
+  confirm it, in the chat or in Homie, and it can't change or remove
+  anything already there. What it reads becomes
   part of your conversation with that assistant, handled by the company
   that makes it (for example Anthropic or OpenAI) under your own account's
   terms and settings with them, including how long it is kept and whether
