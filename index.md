@@ -62,8 +62,11 @@ an AI assistant only if an adult in your household connects one.
   when you plan to leave, so the time reflects traffic for that day and
   hour. The same pair of coordinates also goes to a routing service
   (Geoapify) for a rough time your device keeps to show while Google's
-  answer loads. These requests contain no account identity — never who is
-  going, never your schedule. Search results and Google's travel times stay
+  answer loads. When an AI assistant you've connected asks Homie about your
+  plans, Homie's server asks Google the same way — the same pairs of
+  coordinates and, for a drive, the departure time — and keeps the answer
+  only briefly in memory. These requests contain no account identity —
+  never who is going, never your schedule. Search results and Google's travel times stay
   on your device only briefly; the address and coordinates of a place you
   choose are kept with your household's places. Google handles what it
   receives under the [Google Privacy Policy](https://policies.google.com/privacy).
